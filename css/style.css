@@ -1,9 +1,15 @@
+/* VERSIONE MOBILE */
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 /* Reset */
+
+body {
+    max-width: 480px;
+}
 
 /* Inizio Header */
 nav {
@@ -38,23 +44,14 @@ nav {
         background-color: #B5DDFF;
     }
 
-    .card.one {
+    .card.one div:nth-child(1) {
         display: flex;
         flex-direction: column;
-        justify-content: flex-start;
-        align-items: center;
+        align-items: flex-start;
         gap: 30px;
     }
 
-    .card.one div {
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-start;
-        align-items: center;
-        gap: 30px;
-    }
-
-    .card #img-mobile {
+    #img-mobile {
         display: flex;
         justify-content: center;
     }    
@@ -142,6 +139,7 @@ nav {
     }
 
     .benefits h2:nth-child(1) {
+        text-align: center;
         margin-bottom: 50px;
         color: #FFFFFF;
     }
@@ -241,4 +239,90 @@ nav {
         padding-bottom: 70px;
     }
 
-    
+    /* VERSIONE TABLET */
+
+    @media screen and (min-width:481px) and (max-width: 768px) {
+        body {
+            max-width: 768px;
+        }
+
+        /* prima section */
+
+        .cards {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .card {
+            margin-bottom: 0;
+            flex-grow: 1;
+        }
+
+        .cards .card.one {
+            flex-grow: 2;
+        }
+
+        #img-mobile {
+            display: flex;
+            justify-content: flex-start;
+
+            padding-top: 30px;
+        }
+
+        .cards .card:nth-child(1),
+        .cards .card:nth-child(2) {
+            width: calc(100% / 2 - 20px);
+        }
+
+        .cards .card:nth-child(3),
+        .cards .card:nth-child(4),
+        .cards .card:nth-child(5) {
+            width: calc(100% / 3 - 20px * 2 / 3);
+        }
+
+        /* seconda section */
+
+        #strategic-planning span {
+            display: flex;
+            justify-content: center;
+        }
+
+        /* terza section */
+
+        .card-testimonial {
+            display: flex;
+            flex-direction: row;
+        }
+
+        .card-testimonial div:nth-child(2) p {
+            padding-bottom: 20px;
+        }
+
+        /* quarta section */
+
+        .benefits {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .benefits h2:nth-child(1) {
+            width: 100%;
+            margin-bottom: 30px;
+        }
+
+        .card-benefits {
+            width: calc(100% / 2 - 20px);
+
+            margin-bottom: 0;
+        }
+
+        /* quinta section */
+
+        .about-us {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+        }
