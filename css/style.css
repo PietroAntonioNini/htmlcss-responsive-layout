@@ -192,6 +192,36 @@ nav {
         color: #9792E4;
     }
 
+    /* Inizio Ultima Sezione */
+
+    .get-started {
+        max-width: 100%;
+        padding: 50px 30px;
+
+        background-color: #9792E4;
+    }
+
+    .get-started .container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 30px;
+
+        color: #FFFFFF;
+    }
+
+    .container div {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 25px;
+    }
+
+    .container div h2 {
+        color: #FDC15F;
+    }
+
     /*  */
+
 
     
