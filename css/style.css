@@ -27,6 +27,10 @@ nav {
         padding: 50px 50px;
     }
 
+    .cards h2 {
+        color: #0084FD;
+    }
+
     .card {
         height: 400px;
         /* test */
@@ -69,6 +73,11 @@ nav {
         gap: 60px;
     }
 
+    #strategic-planning h2,
+    #strategic-planning p {
+        color: #FFFFFF;
+    } 
+
     #card-planning {
         display: flex;
         flex-direction: column;
@@ -78,6 +87,31 @@ nav {
         margin-top: 40px;
 
         background-color: #FFFFFF;
+    }
+
+    /* Inizio Terza Sezione */
+
+    .testimonials {
+        max-width: 100%;
+        padding: 50px 50px;
+    }
+
+    .testimonials div {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 30px;
+    }
+
+    .testimonials h2 {
+        color: #9792E4;
+    }
+
+    .card-testimonial {
+        margin-bottom: 30px;
+
+        background-color: #9792E4;
+        color: #FFFFFF;
     }
 
     /*  */
