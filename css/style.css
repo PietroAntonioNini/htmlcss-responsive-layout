@@ -221,7 +221,24 @@ nav {
         color: #FDC15F;
     }
 
-    /*  */
+    /* Inizio Footer */
 
+    footer {
+        max-width: 100%;
+        padding: 50px 30px;
+
+        color: #FFFFFF;
+        background-color: #333333;
+    }
+
+    footer div {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    footer div:nth-child(1) {
+        padding-bottom: 70px;
+    }
 
     
