@@ -33,6 +33,10 @@ nav .menu i {
     font-size: 20px;
 }
 
+nav .menu-desktop {
+    display: none;
+}
+
 /* Inizio Main */
 
 /* Prima Section */
@@ -281,6 +285,7 @@ nav .menu i {
         margin-bottom: 30px;
         padding: 30px 33px;
 
+        border-radius: 50px;
         background-color: #FFFFFF;
     }
 
@@ -506,19 +511,21 @@ nav .menu i {
             flex-wrap: wrap;
             gap: 20px;
         }
-
         .card {
             margin-bottom: 0;
-            flex-grow: 1;
         }
 
         .cards .card.one {
-            flex-grow: 2;
+            width: calc(100% / 3 * 2);
         }
 
-        .cards .card:nth-child(1),
+        #img-mobile {
+            display: flex;
+            justify-content: flex-start;
+        }
+
         .cards .card:nth-child(2) {
-            width: calc(100% / 2 - 20px);
+            width: calc(100% / 3 - 20px);
         }
 
         .cards .card:nth-child(3),
@@ -619,107 +626,7 @@ nav .menu i {
         .cards {
             display: flex;
             flex-wrap: wrap;
-            justify-content: center;
-            gap: 20px;
-        }
-
-        .card {
-            margin-bottom: 0;
-            flex-grow: 1;
-        }
-
-        .cards .card.one {
-            flex-grow: 2;
-        }
-
-        #img-mobile {
-            display: flex;
-            justify-content: flex-start;
-
-            padding-top: 30px;
-        }
-
-        .cards .card:nth-child(1),
-        .cards .card:nth-child(2) {
-            width: calc(100% / 2 - 20px);
-        }
-
-        .cards .card:nth-child(3),
-        .cards .card:nth-child(4),
-        .cards .card:nth-child(5) {
-            width: calc(100% / 3 - 20px * 2 / 3);
-        }
-
-        /* seconda section */
-
-        .planning {
-            display: flex;
-            flex-direction: row;
-            justify-content: center;
-            gap: 50px;
-        }
-
-        /* terza section */
-
-        .card-testimonial {
-            display: flex;
-            flex-direction: row;
-            gap: 40px;
-        }
-
-        .card-testimonial div:nth-child(2) p {
-            padding-bottom: 20px;
-        }
-
-        /* quarta section */
-
-        .benefits {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 20px;
-        }
-
-        .benefits h2:nth-child(1) {
-            width: 100%;
-            margin-bottom: 30px;
-        }
-
-        .card-benefits {
-            width: calc(100% / 3 - 20px);
-
-            margin-bottom: 0;
-        }
-
-        /* quinta section */
-
-        .about-us {
-            display: flex;
-            flex-direction: row;
             justify-content: space-between;
-        }
-    }
-
-    /* VERSIONE DESKTOP */
-
-    @media screen and (min-width: 1200px) {
-        body {
-            max-width: 100%;
-        }
-
-        /* nav */
-
-        nav {
-            max-width: 1150px;
-            margin: auto;
-        }
-
-        /* prima section */
-
-        .cards {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
             gap: 20px;
 
             max-width: 1150px;
@@ -728,23 +635,30 @@ nav .menu i {
 
         .card {
             margin-bottom: 0;
-            flex-grow: 1;
-        }
-
-        .cards .card.one {
-            flex-grow: 2;
         }
 
         #img-mobile {
             display: flex;
             justify-content: flex-start;
 
-            padding-top: 30px;
         }
 
-        .cards .card:nth-child(1),
+        .cards .card.one {
+            width: calc(100% / 3 * 2);
+            display: flex;
+            flex-direction: row;
+        }
+
+        .cards .card.one p {
+            padding-right: 70px;
+        }
+
+        .cards .card.one button {
+            margin-bottom: 0;
+        }
+
         .cards .card:nth-child(2) {
-            width: calc(100% / 2 - 20px);
+            width: calc(100% / 3 - 20px);
         }
 
         .cards .card:nth-child(3),
@@ -780,6 +694,8 @@ nav .menu i {
         .testimonials {
             max-width: 1150px;
             margin: auto;
+            
+            text-align: left;
         }
 
         .card-testimonial {
@@ -788,8 +704,197 @@ nav .menu i {
             gap: 40px;
         }
 
+        .card-testimonial div:nth-child(1) {
+            margin: 0;
+        }
+
         .card-testimonial div:nth-child(2) p {
             padding-bottom: 20px;
+        }
+
+        /* quarta section */
+
+        .benefits {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .benefits h2:nth-child(1) {
+            width: 100%;
+            margin-bottom: 30px;
+        }
+
+        .card-benefits {
+            width: calc(100% / 3 - 20px);
+
+            margin-bottom: 0;
+        }
+
+        /* quinta section */
+
+        .about-us {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+        }
+
+        /* ultima section */
+
+        .get-started .container p {
+            max-width: 500px;
+            margin: auto;
+        }
+
+        /* footer */
+
+        footer div:nth-child(1) {
+            max-width: 350px;
+            margin: auto;
+        }
+
+        footer div:nth-child(2) {
+            max-width: 300px;
+            margin: auto;
+        }
+    }
+
+    /* VERSIONE DESKTOP */
+
+    @media screen and (min-width: 1200px) {
+        body {
+            max-width: 100%;
+        }
+
+        /* nav */
+
+        nav {
+            max-width: 1150px;
+            margin: auto;
+        }
+
+        nav .menu {
+            display: none;
+        }
+
+        nav .menu-desktop {
+            display: flex;
+            align-items: center;
+            gap: 30px;
+        }
+
+        nav .menu-desktop ul {
+            display: flex;
+            gap: 30px;
+
+            font-size: 18px;
+            list-style: none;
+            color: #FFFFFF;
+        }
+
+        nav .menu-desktop button {
+
+            padding: 8px 15px;
+
+            font-size: 16px;
+
+            border: none;
+            border-radius: 50px;
+
+            background-color: #FFFFFF;
+        }
+
+        /* prima section */
+
+        .cards {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            gap: 20px;
+
+            max-width: 1150px;
+            margin: auto;
+        }
+
+        .card {
+            margin-bottom: 0;
+        }
+
+        #img-mobile {
+            display: flex;
+            justify-content: flex-start;
+
+        }
+
+        .cards .card.one {
+            width: calc(100% / 3 * 2);
+            display: flex;
+            flex-direction: row;
+        }
+
+        .cards .card.one p {
+            padding-right: 70px;
+        }
+
+        .cards .card.one button {
+            margin-bottom: 0;
+        }
+
+        .cards .card:nth-child(2) {
+            width: calc(100% / 3 - 20px);
+        }
+
+        .cards .card:nth-child(3),
+        .cards .card:nth-child(4),
+        .cards .card:nth-child(5) {
+            width: calc(100% / 3 - 20px * 2 / 3);
+        }
+
+        /* seconda section */
+
+        .planning {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: flex-end;
+            gap: 50px;
+
+            max-width: 900px;
+            margin: auto;
+        }
+
+        #strategic-planning {
+            max-width: 50%;
+        }
+
+        #card-planning {
+            max-width: 50%;
+            max-height: 550px;
+        }
+
+        /* terza section */
+
+        .testimonials {
+            max-width: 1150px;
+            margin: auto;
+
+            text-align: left;
+        }
+
+        .card-testimonial {
+            display: flex;
+            flex-direction: row;
+            gap: 40px;
+        }
+
+        .card-testimonial div:nth-child(1) {
+            margin-bottom: 0;
+        }
+
+        .card-testimonial div:nth-child(2) p {
+            padding-bottom: 20px;
+            text-align: left;
         }
 
         /* quarta section */
@@ -822,7 +927,31 @@ nav .menu i {
             flex-direction: row;
             justify-content: space-between;
 
-            max-width: 1150px;
+            max-width: 1000px;
             margin: auto;
         }
+
+        .about-us div:nth-child(1) p {
+            padding-right: 80px;
+        }
+
+        /* ultima section */
+
+        .get-started .container p {
+            max-width: 500px;
+            margin: auto;
+        }
+
+        /* footer */
+
+        footer div:nth-child(1) {
+            max-width: 350px;
+            margin: auto;
+        }
+
+        footer div:nth-child(2) {
+            max-width: 300px;
+            margin: auto;
+        }
+
     }
