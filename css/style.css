@@ -516,13 +516,6 @@ nav .menu i {
             flex-grow: 2;
         }
 
-        #img-mobile {
-            display: flex;
-            justify-content: flex-start;
-
-            padding-top: 30px;
-        }
-
         .cards .card:nth-child(1),
         .cards .card:nth-child(2) {
             width: calc(100% / 2 - 20px);
@@ -543,9 +536,17 @@ nav .menu i {
 
         /* terza section */
 
+        .testimonials {
+            text-align: left;
+        }
+
         .card-testimonial {
             display: flex;
             flex-direction: row;
+        }
+
+        .card-testimonial div:nth-child(1) {
+            margin: 0;
         }
 
         .card-testimonial div:nth-child(2) p {
@@ -580,6 +581,29 @@ nav .menu i {
             justify-content: space-between;
         }
 
+        /* ultima section */
+
+        .container div p {
+            max-width: 500px;
+            margin: auto;
+        }
+
+        /* footer */
+
+        footer div {
+            max-width: 380px;
+            margin: auto;
+        }
+
+        footer div:nth-child(2) {
+            max-width: 300px;
+            margin: auto;
+        }
+
+        footer div p a:nth-child(2) {
+            padding-left: 5px;
+        }
+
     }
 
     /* VERSIONE LAPTOP */
@@ -587,7 +611,7 @@ nav .menu i {
     @media screen and (min-width: 769px) and (max-width: 1199px) {
 
         body {
-            max-width: 100%;
+            max-width: 1199px;
         }
 
         /* prima section */
@@ -735,10 +759,20 @@ nav .menu i {
             display: flex;
             flex-direction: row;
             justify-content: center;
+            align-items: flex-end;
             gap: 50px;
 
-            max-width: 1150px;
+            max-width: 900px;
             margin: auto;
+        }
+
+        #strategic-planning {
+            max-width: 50%;
+        }
+
+        #card-planning {
+            max-width: 50%;
+            max-height: 550px;
         }
 
         /* terza section */
